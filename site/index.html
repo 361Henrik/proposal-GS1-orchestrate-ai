@@ -50,7 +50,7 @@
   .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; padding:40px 0 72px; align-items:start}
   .hero h1{font-size:clamp(2.6rem,6.8vw,4.6rem); letter-spacing:-.02em; font-weight:400}
   .hero h1 em{font-style:italic; color:var(--green)}
-  .hero .lede{margin:26px 0; font-size:1.06rem; max-width:34ch}
+  .hero .lede{margin:26px auto; font-size:1.06rem; max-width:54ch; text-align:center}
   .pill-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:8px}
   .pill{background:var(--card); border:1px solid var(--line); border-radius:12px;
     padding:14px 16px; flex:1 1 0; min-width:140px}
@@ -68,7 +68,7 @@
   .thesis h2{color:#fff; max-width:24ch}
 
   /* ---------- staircase ---------- */
-  .stair{display:grid; grid-template-columns:repeat(7,1fr); gap:14px; align-items:end; margin-top:36px}
+  .stair{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; align-items:end; margin-top:36px}
   .step{grid-row:1; background:var(--card); border:1px solid var(--line); border-radius:14px;
     padding:18px 16px; position:relative; min-height:150px; display:flex; flex-direction:column}
   .step .badge{position:absolute; top:14px; right:14px; width:26px; height:26px; border-radius:50%;
@@ -91,6 +91,8 @@
   .step.summit{border:2px solid var(--green); box-shadow:0 8px 24px rgba(31,74,57,.12)}
   .step.later{background:var(--card-alt)}
   .step.later .eyebrow{color:var(--green-badge)}
+  .later-pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px}
+  .later-pair .step{grid-row:auto; min-height:170px; margin-bottom:0}
   .stair-axis{font-size:.7rem; text-transform:uppercase; letter-spacing:.13em; color:var(--gold); font-weight:700; margin-top:20px}
   .stair-note{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px}
   .stair-note div{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px}
@@ -146,7 +148,6 @@
   .reco p{font-size:1.04rem; color:var(--ink); max-width:62ch; margin-bottom:1rem}
   .sig{margin-top:40px; padding-top:28px; border-top:1px solid var(--line); font-size:.95rem; line-height:1.7}
   .sig .name{font-family:var(--serif); font-size:1.2rem; color:var(--green)}
-  footer{padding:50px 0 70px; color:var(--ink-soft); font-size:.82rem}
 
   /* ---------- reveal ---------- */
   .rv{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease}
@@ -163,7 +164,7 @@
     .pillars .grid,.oneplus,.stair-note{grid-template-columns:1fr}
     .later-grid,.loop{grid-template-columns:1fr 1fr}
   }
-  @media(max-width:520px){.later-grid,.loop{grid-template-columns:1fr}}
+  @media(max-width:520px){.later-pair,.later-grid,.loop{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -173,20 +174,20 @@
   <header class="hero">
     <div class="rv in">
       <span class="eyebrow">"Dans med intelligens" for GS1 Norway</span>
-      <h1>Fra ping-pong chat med AI til å kunne skalere med AI.</h1>
+      <h1>Fra ping-pong chat med AI til å skape mye, mye mer med AI.</h1>
       <p class="lede">Et personlig oppsett for én leder, som løfter det ikke-repeterbare tankearbeidet fra spredte AI-forsøk til rolig, dirigert flyt.</p>
       <div class="pill-row">
         <div class="pill"><div class="t">Mindre friksjon</div><div class="d">bedre prompting, kontekst og trygg bruk</div></div>
         <div class="pill"><div class="t">Mer kapasitet og kapabilitet</div><div class="d">tid flyttes fra produksjon til skjønn</div></div>
-        <div class="pill"><div class="t">Trygg bruk</div><div class="d">human-in-the-loop, sporbare kilder</div></div>
+        <div class="pill"><div class="t">Trygg bruk</div><div class="d">menneske i kontroll, sporbare kilder</div></div>
       </div>
     </div>
     <aside class="invest rv in">
       <span class="eyebrow">Hvorfor nå</span>
-      <h3>Skalering uten å måtte ansette flere.</h3>
-      <p>Vision2030 forutsetter vekst inn i nye sektorer uten tilsvarende økning i bemanning. Med rundt 20 mennesker er hver leders AI-flyt en skaleringsfaktor.</p>
+      <h3>Neste nivå i AI skaper kapasitet og kapabilitet.</h3>
+      <p>For at GS1 Norway skal lykkes med mer og forvalte ressursene klokt, må de som ligger lengst fremme i AI-bruken ta neste steg. Da kan de skape ny kapasitet, bygge kapabilitet og hjelpe resten av organisasjonen videre.</p>
       <div class="frame">
-        <span class="big">«GS1 bør bygge AI-flyt nå. Det gjøres best når utvalgte ledere først blir trygge nok til å coache øvrige ansatte videre.»</span>
+        <span class="big">«Min erfaring er at verdien ikke ligger i mer ping-pong med verktøy. Den ligger i å komponere, orkestrere og bruke beste praksis på ekte arbeid. For GS1 Norway kan neste nivå i AI gi et tydelig løft i effektivitet, kapasitet og kapabilitet.»</span>
       </div>
     </aside>
   </header>
@@ -195,14 +196,14 @@
   <section style="border-top:none;padding-top:0">
     <div class="thesis rv">
       <span class="eyebrow">Spørsmålet vi skal løse</span>
-      <h2>Hvordan coacher og lærer vi opp ledere i GS1 Norway til å kunne skalere videre med AI?</h2>
+      <h2>Hvordan coacher og viser vi AI-motiverte ledere i GS1 Norway hvordan de bruker Mac, mobil, funksjonalitet og riktig kontekst på reelle saker, slik at arbeidet holder høy standard og de kan lære resten av teamet videre?</h2>
     </div>
   </section>
 
   <!-- STAIRCASE -->
   <section id="trapp">
-    <h2 class="rv">Prosjektet og hvor dette tilbudet stopper.</h2>
-    <p class="rv" style="margin-top:14px;max-width:64ch">De fleste begynner på trinn 1: spørsmål, svar, nytt forsøk. Dette tilbudet løfter én leder gjennom trinn 2 til 5, opp til orkestrering. Trinn 6 og 7 er bevisst utenfor: det er der man trenger automatisering og agenter, og det er der appene dere allerede har bor.</p>
+    <h2 class="rv">Samarbeidet: hva det handler om, og hva GS1 kan gjøre videre selv.</h2>
+    <p class="rv" style="margin-top:14px;max-width:64ch">Dette er reisen fra god individuell AI-bruk til et mer orkestrert arbeidssett. Samarbeidet handler om trinn 1 til 5. Når dette sitter, kan GS1 selv vurdere de neste lagene: agenter, automatisering og dedikerte mikro-applikasjoner.</p>
 
     <div class="stair rv">
       <div class="step inactive">
@@ -225,30 +226,32 @@
       </div>
       <div class="step">
         <span class="badge">4</span>
-        <span class="st-title">Egne spillebøker</span>
-        <span class="st-d">Eksempler, kontekstpakker og kvalitetssjekk.</span>
-        <span class="st-pay">Læring som varer.</span>
+        <span class="st-title">GS1-spillebøker</span>
+        <span class="st-d">Gjøre GS1s metoder tilgjengelige i chat: research, analyse av medlemsservice, dataundersøkelser og mønstersøk.</span>
+        <span class="st-pay">År med praksis blir brukbar kontekst.</span>
       </div>
       <div class="step summit">
         <span class="badge">5</span>
-        <span class="st-title">Orkestrerte arbeidsflyter</span>
-        <span class="st-d">Ferdigheter, godkjente verktøy, kontrollpunkter.</span>
-        <span class="st-pay">Repeterbar kapasitet.</span>
+        <span class="st-title">Arbeidsflyter med godkjenning</span>
+        <span class="st-d">Konkrete oppgaver settes i flyt, med tydelige kontrollpunkter og menneskelige godkjenninger.</span>
+        <span class="st-pay">Trygg automatisering der det passer.</span>
       </div>
+    </div>
+    <div class="later-pair rv">
       <div class="step later">
         <span class="badge">6</span>
-        <span class="st-title">Arbeidsflyt-automatisering og agenter</span>
-        <span class="st-d">Krever arbeidsflyt-automatisering og agenter med ulike grader av autonomi.</span>
-        <span class="st-pay">Mer kapasitet, med kontroll.</span>
+        <span class="st-title">Senere: agenter med autonomi</span>
+        <span class="st-d">Ikke en del av dette samarbeidet. Når flytene er bevist, kan agenter gjøre oppgaver, resonnere og foreslå alternativer når prosessen ikke går etter planen.</span>
+        <span class="st-pay">Neste optimaliseringslag.</span>
       </div>
       <div class="step later">
         <span class="badge">7</span>
-        <span class="st-title">Tre dedikerte applikasjoner</span>
-        <span class="st-d">Dere bygger Brief, InfoHub og Publishing. Flere dedikerte løsninger vil sannsynligvis følge.</span>
-        <span class="st-pay">Dette laget er i utvikling.</span>
+        <span class="st-title">Dedikerte mikro-applikasjoner</span>
+        <span class="st-d">Små webapplikasjoner for konkrete oppgaver, brukt som annen programvare. Eksempler: Dynamisk Brief, InfoHub og Publishing. Flere kan komme fra GS1 globalt eller andre deler av organisasjonen.</span>
+        <span class="st-pay">Spisset programvare for repeterbare behov.</span>
       </div>
     </div>
-    <div class="stair-axis">Trinn 1–5: dette tilbudet · Trinn 6–7: utenfor scope</div>
+    <div class="stair-axis">Trinn 1-5: dette samarbeidet · Trinn 6-7: mulige neste steg for GS1</div>
 
     <div class="stair-note rv">
       <div>
@@ -282,7 +285,7 @@
         </div>
       </div>
     </div>
-    <p class="rv" style="margin-top:22px;max-width:64ch">Den ene graden som forblir menneskelig, komponistens perspektiv og kontrollpunkt, er deres egen «mennesket er orkestratøren, human-in-the-loop».</p>
+    <p class="rv" style="margin-top:22px;max-width:64ch">Den ene graden som forblir menneskelig, komponistens perspektiv og kontrollpunkt, er deres egen tanke om at mennesket er orkestratøren, med kontrollpunkt underveis.</p>
   </section>
 
   <!-- SETUP DETAIL -->
@@ -375,22 +378,6 @@
       <div class="c"><div class="n">2</div><h3>Anvend</h3><p>Ta den forbedrede metoden i bruk umiddelbart, i egen arbeidsflyt.</p></div>
       <div class="c"><div class="n">3</div><h3>Valider</h3><p>Sjekk om hypotesen holder: tid, kvalitet, gjenbruk, trygghet.</p></div>
       <div class="c"><div class="n">4</div><h3>Skaler</h3><p>Avgjør hva som skal rulles ut, automatiseres eller læres videre.</p></div>
-    </div>
-  </section>
-
-  <!-- RECOMMENDATION -->
-  <section class="reco">
-    <span class="eyebrow rv">Min anbefaling</span>
-    <h2 class="rv" style="margin-bottom:18px">Start med én leder. Legg til den andre om rollen er ulik.</h2>
-    <p class="rv">Min anbefaling er å starte personlig: én leder, ett oppsett, bygget rundt det ikke-repeterbare tankearbeidet. Det er her den største gevinsten ligger, og det er trygt, sporbart og menneske-i-førersetet hele veien.</p>
-    <p class="rv">Er det to ledere med ulike roller, blir oppsettet skarpere ved å gjøre begge. Og når flyten sitter, har dere selv menneskene som kan lære det videre, uten at vi har bygget noe dere må vedlikeholde.</p>
-    <p class="rv">Et kort møte er nok til å avgjøre hvem som bør være leder 1. Jeg foreslår 30 minutter.</p>
-
-    <div class="sig rv">
-      <span class="name">Henrik</span><br>
-      henrik@threesixty1.com<br>
-      www.threesixtyone.ai<br>
-      941 52 361
     </div>
   </section>
 
